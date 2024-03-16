@@ -1,6 +1,7 @@
 /* Base styles */
 html {
     font-size: 62.5%; /* Set 1rem to 10px */
+    overflow-x: hidden;
 }
 
 body {
