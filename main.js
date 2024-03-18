@@ -18,3 +18,22 @@ const countdown = setInterval(() => {
         document.getElementById("countdown").innerHTML = "Countdown expired";
     }
 }, 1000);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const headerLinks = document.querySelectorAll('header ul li a');
+
+    headerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
